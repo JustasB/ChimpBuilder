@@ -1,0 +1,34 @@
+﻿<Window x:Class="ChimpBuilderTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChimpBuilderTool"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="471.272" MinWidth="713.196" Height="464.249" Width="529.487">
+    <Grid>
+        <TextBox x:Name="label4" VerticalAlignment="Top" Height="35" TextWrapping="Wrap" Text="1) save mc frame as html 2) start new NB theme 3) upload all images to NB theme 4) inspect img table and paste outerHTML 5) copy iframe html 6) convert 7) check list below"/>
+        <Grid Margin="0,40,0,55">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Label x:Name="label" Content="ChimpHTML" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtChimp" Text="" AcceptsReturn="True" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,31,0,0"/>
+            </Grid>
+            <Grid  Grid.Column="1">
+                <Label x:Name="label1" Content="NB Theme Files HTML (from inspect table)" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtThemeFiles" Text="" AcceptsReturn="True" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,31,0,25"/>
+                <Button x:Name="btnConvert" Content="Contert to NB" Click="btnConvert_Click" VerticalAlignment="Bottom"/>
+            </Grid>
+            <Grid  Grid.Column="2">
+                <Label x:Name="label3" Content="NB BODY HTML" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtNBhtml" Text="" AcceptsReturn="True" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,31,0,0"/>
+            </Grid>
+        </Grid>
+        <TextBox x:Name="label2" VerticalAlignment="Bottom" Height="50" Text="Check for: 1) saved from top comment 2) mc logo at bottom 3) css link reference 4) update preferences link 5) correct unsubsribe link 6) no &quot;or&quot; before unsubscribe 7) no add to address book 8) all images cloudflare 9) firs name script 10) body tag at the end" TextWrapping="Wrap"/>
+    </Grid>
+</Window>
